@@ -38,8 +38,9 @@ while True:
 
         while i < len(taches):
             if mot_cle.lower() in taches[i].lower():
-                print(i + 1, "-", taches[i])
-                trouve = True
+                 print("Tâche trouvée :")
+                 print(i + 1, "-", taches[i])
+                 trouve = True
 
             i = i + 1
 
