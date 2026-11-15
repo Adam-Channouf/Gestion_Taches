@@ -30,22 +30,27 @@ while True:
                 print(i + 1, "-", taches[i])
                 i = i + 1
 
+    
     elif choix == "3":
-        mot_cle = input("Mot-clé à rechercher : ")
+        mot_cle = input("Mot-clé à rechercher : ").strip()
 
-        trouve = False
-        i = 0
+        if mot_cle == "":
+            print("Erreur : le mot-clé ne peut pas être vide.")
+        else:
+            trouve = False
+            i = 0
 
-        while i < len(taches):
-            if mot_cle.lower() in taches[i].lower():
-                 print("Tâche trouvée :")
-                 print(i + 1, "-", taches[i])
-                 trouve = True
+            while i < len(taches):
+                if mot_cle.lower() in taches[i].lower():
+                    print("Tâche trouvée :")
+                    print(i + 1, "-", taches[i])
+                    trouve = True
 
-            i = i + 1
+                i = i + 1
 
-        if trouve == False:
-            print("Aucune tâche correspondante.")
+            if trouve == False:
+                print("Aucune tâche correspondante.")
+
 
     elif choix == "0":
         print("Au revoir !")
